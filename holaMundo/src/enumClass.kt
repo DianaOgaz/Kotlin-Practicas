@@ -58,8 +58,13 @@ private fun NestedAndInnerClass(){
     println("el resultado de la suma es: $resu")
 }
  private fun classInheritance(){
-     val programmer = Programmer("Diana", 16)
+     val person = Person("Sara", 21)
+     val programmer = Programmer("Diana", 16, language = "Kotlin")
      val desinger = Designer("Armando", 12)
-     programmer.work()
+     //programmer.work()
+     programmer.sayLanguage()
      desinger.work()
+     programmer.gotToWork()
+     person.work()
+     programmer.drive()
  }
