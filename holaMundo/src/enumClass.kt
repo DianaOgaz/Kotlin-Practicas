@@ -1,17 +1,23 @@
 fun main() {
 
     //Enum classes
-    enumClass()
+    //enumClass()
+
     //Nested and inner classes
-    NestedAndInnerClass()
+    //NestedAndInnerClass()
+
     //Herencia de clases
-    classInheritance()
+    //classInheritance()
+
+    //Interfaces
+    interfaces()
 }
-enum class direccion (){ //Se declara la clase para enum donde contiene las direcciones del usuario 
+enum class direccion (){ //Se declara la clase para enum donde contiene las direcciones del usuario
+                       //Cada enum es un objeto
     Norte, Sur, Este, Oeste; //Es importante que se cierre la declaracion de enmun con ;
 
     fun description() : String{
-        return when (this){ // se deben de tomar en cuenta todos los posibles valres 
+        return when (this){ // se deben de tomar en cuenta todos los posibles valores
             Norte -> "La direccion es norte"
             Sur -> "La direccion es sur"
             Este -> "La direccion es este"
@@ -19,7 +25,6 @@ enum class direccion (){ //Se declara la clase para enum donde contiene las dire
             else -> "La direccion se encuentra" // se usa else en caso de que pueda obtener más resultados pero en este caso es innecesario
         }
     }
-
 
 }
 private fun enumClass(){
@@ -68,3 +73,8 @@ private fun NestedAndInnerClass(){
      person.work()
      programmer.drive()
  }
+private fun interfaces(){
+val game = Person(name = "César", age = 24)
+    game.stream()
+    game.play()
+}
