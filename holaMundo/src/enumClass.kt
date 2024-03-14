@@ -10,7 +10,10 @@ fun main() {
     //classInheritance()
 
     //Interfaces
-    interfaces()
+    //interfaces()
+
+    //Visibility
+    visibilityModifiers()
 }
 enum class direccion (){ //Se declara la clase para enum donde contiene las direcciones del usuario
                        //Cada enum es un objeto
@@ -77,4 +80,8 @@ private fun interfaces(){
 val game = Person(name = "César", age = 24)
     game.stream()
     game.play()
+}
+private fun visibilityModifiers(){
+    val visibility = Visibility() //Instanciar el objeto
+    visibility.sayMyName()
 }
