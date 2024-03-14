@@ -13,7 +13,10 @@ fun main() {
     //interfaces()
 
     //Visibility
-    visibilityModifiers()
+    //visibilityModifiers()
+
+    //DataClasses
+    dataClasses()
 }
 enum class direccion (){ //Se declara la clase para enum donde contiene las direcciones del usuario
                        //Cada enum es un objeto
@@ -84,4 +87,28 @@ val game = Person(name = "César", age = 24)
 private fun visibilityModifiers(){
     val visibility = Visibility() //Instanciar el objeto
     visibility.sayMyName()
+}
+private fun dataClasses(){
+    val diana = Worker("Diana", 24, "Grupo Roga")
+    diana.lastWork = "Cantante"
+
+    val sara = Worker()
+
+    //Contiene operaciones como equals y hashcode
+    if (diana.equals(sara)){
+        println("Son iguales")
+    }else{
+        println("No son iguales")
+    }
+    //toString que convierte el valor almacenado en un string
+    //copy
+    val diana2 = diana.copy(age = 23) //Realiza una copia del objeto y se puede cambiar sus parametros
+
+    //ComponentN
+    //El objeto se puede dividir en sus mismos parametros
+    val (name, age) = diana
+    println(name)
+    println(age)
+
+
 }
