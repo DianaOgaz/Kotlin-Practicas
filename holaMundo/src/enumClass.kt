@@ -1,3 +1,6 @@
+private
+//typealias puede ser utilizado para tipos de dato largos, funciones y funciones en clases anidadas
+typealias myMapList = MutableMap<Int, ArrayList<String>> //Se puede usar typeAlias para tipos de datos y para funciones
 fun main() {
 
     //Enum classes
@@ -16,7 +19,13 @@ fun main() {
     //visibilityModifiers()
 
     //DataClasses
-    dataClasses()
+    //dataClasses()
+
+    //Type aliases
+    //typeAliases()
+
+    //Lambdas
+    lambdas()
 }
 enum class direccion (){ //Se declara la clase para enum donde contiene las direcciones del usuario
                        //Cada enum es un objeto
@@ -106,9 +115,26 @@ private fun dataClasses(){
 
     //ComponentN
     //El objeto se puede dividir en sus mismos parametros
+    //Esto tambien es desestructuracion de datos
+    //Se puede usar para clases y
     val (name, age) = diana
     println(name)
     println(age)
+}
+private var myMap: myMapList = mutableMapOf()
+private fun typeAliases() {
+    var myNewMap: myMapList = mutableMapOf()
+    myNewMap[0] = arrayListOf("Diana", "Ogaz")
+    myNewMap[1] = arrayListOf("César", "Gonzalez")
+    myMap = myNewMap
+}
+private fun lambdas(){
+    //Las lambdas son descritas como funciones que pueden funcionar dentro de otras funciones
+    val myIntList = arrayListOf(0,1,2,3,4,5,6,7,8,9,10)
+   val myFilterIntList = myIntList.filter {
+        it >5
 
+    }
+    println(myFilterIntList)
 
 }
